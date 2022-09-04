@@ -420,8 +420,8 @@ def login():
         print("Sai Pass Rồi Thằng Mặt Lồn !")
         sys.exit(1)
     elif username == user and password == passwd:
-        print("Welcome to Neon DDoS")
-        time.sleep(0.3)
+        print("Welcome to Lucifer DDoS Panel")
+        time.sleep(0.5)
         main()
 
 login()
