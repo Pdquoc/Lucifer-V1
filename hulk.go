@@ -9147,7 +9147,7 @@ func main() {
 	}
 
 	go func() {
-		fmt.Println("[V2Z] Attack Started\n\n\n")
+		fmt.Println("\x1b[38;5;228mLucifer\x1b[38;5;255m@\x1b[38;5;207mAttack Started\n\n\n")
 		ss := make(chan uint8, 8)
 		var (
 			err, sent int32
