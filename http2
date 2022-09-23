@@ -12,8 +12,8 @@ tls.DEFAULT_ECDH_CURVE;
 
 let payload = {};
 
-var proxies = fs.readFileSync('utils/http.txt', 'utf-8').toString().replace(/\r/g, '').split('\n');
-var UAs = fs.readFileSync('utils/ua.txt', 'utf-8').replace(/\r/g, '').split('\n');
+var proxies = fs.readFileSync('proxies.txt', 'utf-8').toString().replace(/\r/g, '').split('\n');
+var UAs = fs.readFileSync('ua.txt', 'utf-8').replace(/\r/g, '').split('\n');
 var objetive = process.argv[2];
 var parsed = url.parse(objetive);
 const sigalgs = [
