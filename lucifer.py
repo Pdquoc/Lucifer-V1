@@ -33,7 +33,7 @@ def layer7():
                    \x1b[38;5;207mhttp-raw           http-flood
                    http-mix           cf-bypass
                    http-socket           crash     
-                   http-rand                  
+                   http-rand             http2
                    http-browser                
                                  
       \x1b[38;5;228m╠═════════╦══════════════$══════════════════╦═════════╣
